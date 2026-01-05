@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Apply Inter globally */
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar active gradient style */
+.sidebar-link.active {
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+  color: #ffffff;
+}
+
+/* Gradient used for progress bars */
+.progress-gradient {
+  background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+/* Ensure form control text is visible regardless of color scheme */
+input, select, textarea {
+  color: #000000;
+}
+input::placeholder, textarea::placeholder {
+  color: #6b7280; /* gray-500 */
+}
+
+/* Make react-datepicker popper appear above modal */
+.react-datepicker-popper { z-index: 60; }
+.react-datepicker { background-color: #ffffff; border: 1px solid #e5e7eb; }
+.react-datepicker__header { background-color: #f9fafb; border-bottom: 1px solid #e5e7eb; }
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected { background: linear-gradient(90deg, #3b82f6 0%, #1d4ed8 100%); color: #fff; }
